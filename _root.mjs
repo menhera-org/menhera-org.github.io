@@ -18,9 +18,9 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import MenheraActivityElement from '/_class-MenheraActivityElement.mjs';
-import MenheraFrameElement from '/_class-MenheraFrameElement.mjs';
-import MenheraDrawerElement from '/_class-MenheraDrawerElement.mjs';
-import MenheraMenubarElement from '/_class-MenheraMenubarElement.mjs';
+import {MenheraActivityElement} from '/_class-MenheraActivityElement.mjs';
+import {MenheraFrameElement} from '/_class-MenheraFrameElement.mjs';
+import {MenheraDrawerElement} from '/_class-MenheraDrawerElement.mjs';
+import {MenheraMenubarElement} from '/_class-MenheraMenubarElement.mjs';
 
 
