@@ -18,8 +18,29 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#loading-logo {
-	max-width: 50%;
-	max-height: 50%;
+:root {
+	display: flex;
+	flex-direction: column;
+	min-block-size: 100%;
+}
+
+body {
+	margin: 0;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+#top-frame {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+menhera-frame > menhera-activity {
+	flex-grow: 1;
+	display: grid;
+	align-items: center;
+	justify-items: center;
 }
 

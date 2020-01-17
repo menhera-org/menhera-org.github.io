@@ -35,9 +35,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 </template>
 <template id='menhera-activity'>
 <link href='/_menhera-activity.css' rel='stylesheet'/>
-<slot><svg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'>
+<slot><svg id='loading-logo' viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'>
 <!-- Loading logo -->
-<circle cx='128' cy='128' r='64' stroke='#eff' stroke-width='16'/>
+<circle cx='128' cy='128' fill='none' r='96' stroke='#5eaf00' stroke-width='16'/>
+<path d='M84,96 l8,8 l-16,64 m16,-64 h96 l-16,64 m-32,-64 l-16,64' fill='none' stroke='#5eaf00' stroke-linecap='round' stroke-linejoin='round' stroke-width='16'/>
 </svg></slot>
 </template>
 <template id='menhera-drawer'>
