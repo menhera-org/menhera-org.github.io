@@ -31,13 +31,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <link as='style' href='/_menhera-menubar.css' rel='preload'/>
 <template id='menhera-frame'>
 <link href='/_menhera-frame.css' rel='stylesheet'/>
+<slot></slot>
+</template>
+<template id='menhera-activity'>
+<link href='/_menhera-activity.css' rel='stylesheet'/>
 <slot><svg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'>
 <!-- Loading logo -->
 <circle cx='128' cy='128' r='64' stroke='#eff' stroke-width='16'/>
 </svg></slot>
-</template>
-<template id='menhera-activity'>
-<link href='/_menhera-activity.css' rel='stylesheet'/>
 </template>
 <template id='menhera-drawer'>
 <link href='/_menhera-drawer.css' rel='stylesheet'/>
