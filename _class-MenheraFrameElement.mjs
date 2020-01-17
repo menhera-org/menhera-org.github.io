@@ -29,7 +29,6 @@ export class MenheraFrameElement extends HTMLElement
 	{
 		super ();
 		const shadowRoot = this.attachShadow ({mode: 'open'});
-		const shadowRoot = this.attachShadow ({mode: 'open'});
 		const content = document.querySelector ('#menhera-frame').content;
 		shadowRoot.appendChild (content.cloneNode (true));
 	}

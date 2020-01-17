@@ -29,7 +29,6 @@ export class MenheraActivityElement extends HTMLElement
 	{
 		super ();
 		const shadowRoot = this.attachShadow ({mode: 'open'});
-		const shadowRoot = this.attachShadow ({mode: 'open'});
 		const content = document.querySelector ('#menhera-activity').content;
 		shadowRoot.appendChild (content.cloneNode (true));
 	}

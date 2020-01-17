@@ -29,7 +29,6 @@ export class MenheraMenubarElement extends HTMLElement
 	{
 		super ();
 		const shadowRoot = this.attachShadow ({mode: 'open'});
-		const shadowRoot = this.attachShadow ({mode: 'open'});
 		const content = document.querySelector ('#menhera-menubar').content;
 		shadowRoot.appendChild (content.cloneNode (true));
 	}
