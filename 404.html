@@ -43,9 +43,15 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 </template>
 <template id='menhera-drawer'>
 <link href='/_menhera-drawer.css' rel='stylesheet'/>
+<h2 id='site-name'><slot name='site-name'>Menhera.org Components</slot></h2>
+<div id='user-name'><slot name='user-name'><a href='/login'>Log in</a></slot></div>
+<div id='menu'><slot></slot></div>
 </template>
 <template id='menhera-menubar'>
 <link href='/_menhera-menubar.css' rel='stylesheet'/>
+<button id='toggle-drawer'>Toggle drawer</button>
+<h1 id='heading'><slot name='title'>Activity</slot></h1>
+<a id='main-account' href='/login'>Account</a>
 </template>
 </head>
 <body>
@@ -55,13 +61,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <menhera-activity id='activity-loading'></menhera-activity>
 <menhera-activity id='activity-start' hidden=''></menhera-activity>
 </menhera-frame>
-<menhera-menubar>
-<button id='main-toggle-drawer'>Toggle drawer</button>
-<h1 id='main-heading'>Home</h1>
-<a id='main-account' href='/login'>Log in</a>
+<menhera-menubar id='main-menubar'>
+<div slot='title'>Home</div>
 </menhera-menubar>
-<menhera-drawer>
-<div id='user-name' slot='user-name'></div>
+<menhera-drawer id='main-drawer'>
 <nav>
 <ul>
 <li>
