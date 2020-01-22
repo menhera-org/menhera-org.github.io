@@ -20,5 +20,7 @@
 
 :host {
 	overflow: hidden;
+	width: calc(100% - 4rem);
+	max-width: 20rem;
 }
 

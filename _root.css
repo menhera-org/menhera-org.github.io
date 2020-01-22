@@ -50,7 +50,7 @@ menhera-frame > menhera-activity[hidden] {
 
 #activity-main {
 	display: grid;
-	grid-template-columns: [main-start] minmax(calc(100% - 4rem), 20rem) [content-start] 1fr [main-end];
+	grid-template-columns: [main-start] max-content [content-start] 1fr [main-end];
 	grid-template-rows: [main-start] max-content [content-start] 1fr [main-end];
 }
 
