@@ -28,8 +28,10 @@
 body {
 	margin: 0;
 	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: [main-start] max-content [content-start] 1fr [main-end];
+	grid-template-rows: [main-start] max-content [content-start] 1fr [main-end];
+	transition: all .25s ease-out;
 }
 
 menhera-frame {
@@ -45,22 +47,11 @@ menhera-frame > menhera-activity[hidden] {
 	display: none;
 }
 
-#top-frame {
-	flex-grow: 1;
-}
-
-#activity-main {
-	display: grid;
-	grid-template-columns: [main-start] max-content [content-start] 1fr [main-end];
-	grid-template-rows: [main-start] max-content [content-start] 1fr [main-end];
-	transition: all .25s ease-out;
-}
-
-#activity-main.collapsed {
+body.collapsed {
 	grid-template-columns: [main-start] 0 [content-start] 1fr [main-end];
 }
 
-#activity-main > menhera-frame {
+body > menhera-frame {
 	grid-column-start: content-start;
 	grid-column-end: main-end;
 	grid-row-start: content-start;
@@ -68,7 +59,7 @@ menhera-frame > menhera-activity[hidden] {
 	transition: all .25s ease-out;
 }
 
-#activity-main > menhera-menubar {
+body > menhera-menubar {
 	grid-column-start: content-start;
 	grid-column-end: main-end;
 	grid-row-start: main-start;
@@ -78,7 +69,7 @@ menhera-frame > menhera-activity[hidden] {
 	color: #fff;
 }
 
-#activity-main > menhera-drawer {
+body > menhera-drawer {
 	grid-column-start: main-start;
 	grid-column-end: content-start;
 	grid-row-start: main-start;

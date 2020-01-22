@@ -18,9 +18,11 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-:host {
-	overflow: hidden;
-	/*width: calc(100% - 4rem);*/
-	max-width: 20rem;
+button, input, select {
+	font: inherit;
+}
+
+a {
+	text-decoration: none;
 }
 
