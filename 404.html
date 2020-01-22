@@ -22,7 +22,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <meta charset='utf-8'/>
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <title>Menhera.org Github Page</title>
-<meta content='default-src &apos;none&apos;; style-src &apos;self&apos; https://fonts.googleapis.com; script-src &apos;self&apos;; child-src &apos;self&apos;; worker-src &apos;self&apos;; font-src &apos;self&apos; https://fonts.gstatic.com; frame-src &apos;self&apos;; connect-src &apos;self&apos;; manifest-src &apos;self&apos; prefetch-src &apos;self&apos;; base-uri &apos;none&apos;; form-action &apos;self&apos;; frame-ancestors &apos;none&apos;; upgrade-insecure-requests' http-equiv='content-security-policy'/>
+<meta content='default-src &apos;none&apos;; style-src &apos;self&apos; https://fonts.googleapis.com; script-src &apos;self&apos;; child-src &apos;self&apos;; worker-src &apos;self&apos;; font-src &apos;self&apos; https://fonts.gstatic.com; frame-src &apos;self&apos;; connect-src &apos;self&apos;; manifest-src &apos;self&apos; prefetch-src &apos;self&apos;; base-uri &apos;none&apos;; form-action &apos;self&apos;; upgrade-insecure-requests' http-equiv='content-security-policy'/>
 <link href='/_root.css' rel='stylesheet'/>
 <script src='/_root.mjs' type='module'></script>
 <link as='style' href='/_menhera-frame.css' rel='preload'/>
@@ -50,7 +50,38 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 </head>
 <body>
 <menhera-frame id='top-frame'>
+<menhera-activity id='activity-main'>
+<menhera-frame id='main-frame'>
 <menhera-activity id='activity-loading'></menhera-activity>
+<menhera-activity id='activity-start' hidden=''></menhera-activity>
+</menhera-frame>
+<menhera-menubar>
+<button id='main-toggle-drawer'>Toggle drawer</button>
+<h1 id='main-heading'>Home</h1>
+<a id='main-account' href='/login'>Log in</a>
+</menhera-menubar>
+<menhera-drawer>
+<div id='user-name' slot='user-name'></div>
+<nav>
+<ul>
+<li>
+Menu 1
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+</li>
+<li>
+Menu 2
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+</li>
+</ul>
+</nav>
+</menhera-drawer>
+</menhera-activity>
 </menhera-frame>
 </body>
 </html>

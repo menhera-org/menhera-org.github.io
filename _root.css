@@ -37,6 +37,10 @@ body {
 	flex-direction: column;
 }
 
+menhera-frame {
+	
+}
+
 menhera-frame > menhera-activity {
 	flex-grow: 1;
 	display: grid;
