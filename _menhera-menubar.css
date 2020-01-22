@@ -22,6 +22,7 @@
 	display: grid;
 	grid-template-columns: 4rem 1fr 4rem;
 	align-items: center;
+	overflow: hidden;
 }
 
 #toggle-drawer {
@@ -32,6 +33,8 @@
 	font-size: 0;
 	box-sizing: border-box;
 	block-size: 100%;
+	background-color: rgba(255,255,255,0.25);
+	border: none;
 }
 
 #heading {
