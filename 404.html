@@ -23,6 +23,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <title>Menhera.org Github Page</title>
 <meta content='default-src &apos;none&apos;; style-src &apos;self&apos; https://fonts.googleapis.com; script-src &apos;self&apos;; child-src &apos;self&apos;; worker-src &apos;self&apos;; font-src &apos;self&apos; https://fonts.gstatic.com; frame-src &apos;self&apos;; connect-src &apos;self&apos;; manifest-src &apos;self&apos; prefetch-src &apos;self&apos;; base-uri &apos;none&apos;; form-action &apos;self&apos;; upgrade-insecure-requests' http-equiv='content-security-policy'/>
+<link href='/_common.css' rel='stylesheet'/>
 <link href='/_root.css' rel='stylesheet'/>
 <script src='/_root.mjs' type='module'></script>
 <link as='style' href='/_menhera-frame.css' rel='preload'/>
@@ -30,10 +31,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 <link as='style' href='/_menhera-drawer.css' rel='preload'/>
 <link as='style' href='/_menhera-menubar.css' rel='preload'/>
 <template id='menhera-frame'>
+<link href='/_common.css' rel='stylesheet'/>
 <link href='/_menhera-frame.css' rel='stylesheet'/>
 <slot></slot>
 </template>
 <template id='menhera-activity'>
+<link href='/_common.css' rel='stylesheet'/>
 <link href='/_menhera-activity.css' rel='stylesheet'/>
 <slot><svg id='loading-logo' viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'>
 <!-- Loading logo -->
@@ -42,12 +45,14 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 </svg></slot>
 </template>
 <template id='menhera-drawer'>
+<link href='/_common.css' rel='stylesheet'/>
 <link href='/_menhera-drawer.css' rel='stylesheet'/>
 <h2 id='site-name'><slot name='site-name'>Menhera.org Components</slot></h2>
 <div id='user-name'><slot name='user-name'><a href='/login'>Log in</a></slot></div>
 <div id='menu'><slot></slot></div>
 </template>
 <template id='menhera-menubar'>
+<link href='/_common.css' rel='stylesheet'/>
 <link href='/_menhera-menubar.css' rel='stylesheet'/>
 <button id='toggle-drawer'>Toggle drawer</button>
 <h1 id='heading'><slot name='title'>Activity</slot></h1>

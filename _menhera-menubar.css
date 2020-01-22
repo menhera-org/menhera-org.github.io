@@ -21,5 +21,23 @@
 :host {
 	display: grid;
 	grid-template-columns: 4rem 1fr 4rem;
+	align-items: center;
+}
+
+#toggle-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+#heading {
+	margin: 0;
+	padding-inline-start: 1rem;
+	padding-inline-end: 1rem;
+	padding-block-start: 1rem;
+	padding-block-end: 1rem;
+	font-weight: 300;
+	font-size: 125%;
+	text-align: center;
 }
 
