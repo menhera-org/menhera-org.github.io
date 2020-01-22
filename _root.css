@@ -75,7 +75,7 @@ body > menhera-drawer {
 	grid-row-start: main-start;
 	grid-row-end: main-end;
 	transition: all .25s ease-out;
-	background-color: #4a6700;
+	background-color: #b52700;
 	color: #fff;
 }
 
