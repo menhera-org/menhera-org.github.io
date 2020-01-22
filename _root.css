@@ -48,3 +48,7 @@ menhera-frame > menhera-activity {
 	justify-items: center;
 }
 
+menhera-frame > menhera-activity[hidden] {
+	display: none;
+}
+
