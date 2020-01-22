@@ -65,7 +65,7 @@ body > menhera-menubar {
 	grid-row-start: main-start;
 	grid-row-end: content-start;
 	transition: all .25s ease-out;
-	background-color: #333;
+	background-color: #b70070;
 	color: #fff;
 }
 
@@ -75,7 +75,7 @@ body > menhera-drawer {
 	grid-row-start: main-start;
 	grid-row-end: main-end;
 	transition: all .25s ease-out;
-	background-color: #333;
+	background-color: #4a6700;
 	color: #fff;
 }
 
