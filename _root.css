@@ -31,12 +31,6 @@ body {
 	flex-direction: column;
 }
 
-#top-frame {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-}
-
 menhera-frame {
 	
 }
@@ -44,11 +38,44 @@ menhera-frame {
 menhera-frame > menhera-activity {
 	flex-grow: 1;
 	display: grid;
-	align-items: center;
-	justify-items: center;
 }
 
 menhera-frame > menhera-activity[hidden] {
 	display: none;
+}
+
+#top-frame {
+	flex-grow: 1;
+}
+
+#activity-main {
+	display: grid;
+	grid-template-columns: [main-start] minmax(calc(100% - 4rem), 20rem) [content-start] 1fr [main-end];
+	grid-template-rows: [main-start] max-content [content-start] 1fr [main-end];
+}
+
+#activity-main.collapsed {
+	grid-template-columns: [main-start] 0 [content-start] 1fr [main-end];
+}
+
+#activity-main > menhera-frame {
+	grid-column-start: content-start;
+	grid-column-end: main-end;
+	grid-row-start: content-start;
+	grid-row-end: main-end;
+}
+
+#activity-main > menhera-menubar {
+	grid-column-start: content-start;
+	grid-column-end: main-end;
+	grid-row-start: main-start;
+	grid-row-end: content-start;
+}
+
+#activity-main > menhera-drawer {
+	grid-column-start: main-start;
+	grid-column-end: content-start;
+	grid-row-start: main-start;
+	grid-row-end: main-end;
 }
 

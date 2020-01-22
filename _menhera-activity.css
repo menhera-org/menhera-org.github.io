@@ -21,5 +21,7 @@
 #loading-logo {
 	max-width: 50%;
 	max-height: 50%;
+	align-self: center;
+	justify-self: center;
 }
 
