@@ -22,6 +22,7 @@
 	display: flex;
 	flex-direction: column;
 	min-block-size: 100%;
+	font-family: system-ui, sans-serif;
 }
 
 body {
@@ -52,6 +53,7 @@ menhera-frame > menhera-activity[hidden] {
 	display: grid;
 	grid-template-columns: [main-start] max-content [content-start] 1fr [main-end];
 	grid-template-rows: [main-start] max-content [content-start] 1fr [main-end];
+	transition: all .25s ease-out;
 }
 
 #activity-main.collapsed {
@@ -63,6 +65,7 @@ menhera-frame > menhera-activity[hidden] {
 	grid-column-end: main-end;
 	grid-row-start: content-start;
 	grid-row-end: main-end;
+	transition: all .25s ease-out;
 }
 
 #activity-main > menhera-menubar {
@@ -70,6 +73,7 @@ menhera-frame > menhera-activity[hidden] {
 	grid-column-end: main-end;
 	grid-row-start: main-start;
 	grid-row-end: content-start;
+	transition: all .25s ease-out;
 }
 
 #activity-main > menhera-drawer {
@@ -77,5 +81,6 @@ menhera-frame > menhera-activity[hidden] {
 	grid-column-end: content-start;
 	grid-row-start: main-start;
 	grid-row-end: main-end;
+	transition: all .25s ease-out;
 }
 
