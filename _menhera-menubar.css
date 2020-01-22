@@ -24,10 +24,14 @@
 	align-items: center;
 }
 
-#toggle-button {
+#toggle-drawer {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	margin: 0;
+	font-size: 0;
+	box-sizing: border-box;
+	block-size: 100%;
 }
 
 #heading {
