@@ -19,15 +19,15 @@
 */
 
 :root {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
 	min-block-size: 100%;
 	font-family: system-ui, sans-serif;
 }
 
 body {
 	margin: 0;
-	flex-grow: 1;
 	display: grid;
 	grid-template-columns: [main-start] max-content [content-start] 1fr [main-end];
 	grid-template-rows: [main-start] max-content [content-start] 1fr [main-end];
