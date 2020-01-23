@@ -26,6 +26,7 @@
 }
 
 #toggle-drawer {
+	display: block;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -54,5 +55,12 @@
 
 #account {
 	color: inherit;
+	font-size: 0;
+	display: block;
+	block-size: 100%;
+	background-image: url(/_user.svg);
+	background-size: 50%;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
