@@ -22,5 +22,41 @@
 	overflow: hidden;
 	/*width: calc(100% - 4rem);*/
 	max-width: 20rem;
+	box-shadow: inset 0 0 1rem #666;
+}
+
+#site-name {
+	font-weight: 300;
+	text-align: center;
+}
+
+#site-subtitle {
+	font-size: inherit;
+	font-weight: 300;
+}
+
+#site-name {
+	margin: 0;
+	padding-block-start: 2rem;
+	padding-block-end: .5rem;
+	padding-inline-start: 1rem;
+	padding-inline-end: 1rem;
+	font-weight: bold;
+}
+
+#site-subtitle {
+	font-weight: 300;
+	font-size: 100%;
+	margin: 0;
+	padding-block-start: .5rem;
+	padding-inline-start: 1rem;
+	padding-inline-end: 1rem;
+	padding-block-end: .5rem;
+}
+
+#user-name {
+	color: #666;
+	background-color: #fff;
+	padding: 1rem;
 }
 
