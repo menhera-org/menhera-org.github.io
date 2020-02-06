@@ -18,41 +18,32 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-export class MenheraDrawerElement extends HTMLElement
+
+export class ShadowObjects extends WeakMap
 {
-	static get observedAttributes ()
-	{
-		return [];
-	}
-	
-	constructor ()
+	construct ()
 	{
 		super ();
-		const shadowRoot = this.attachShadow ({mode: 'open'});
-		const content = document.querySelector ('#menhera-drawer').content;
-		shadowRoot.appendChild (content.cloneNode (true));
+		Reflect.preventExtensions (this);
 	}
 	
-	connectedCallback ()
+	get (obj)
 	{
+		if (!super.has (obj)) {
+			super.set (obj, Object.create (null));
+		}
 		
+		return super.get (obj);
 	}
 	
-	disconnectedCallback ()
+	set (obj, value)
 	{
-		
+		return false;
 	}
 	
-	adoptedCallback ()
+	has (obj)
 	{
-		
-	}
-	
-	attributeChangedCallback ()
-	{
-		
+		return true;
 	}
 }
-
-customElements.define ('menhera-drawer', MenheraDrawerElement);
 

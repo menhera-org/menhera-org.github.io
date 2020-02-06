@@ -36,7 +36,7 @@
 	block-size: 100%;
 	background-color: rgba(255,255,255,0.25);
 	border: none;
-	background-image: url(/_menu.svg);
+	background-image: url(resources/menu.svg);
 	background-size: 50%;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -58,7 +58,7 @@
 	font-size: 0;
 	display: block;
 	block-size: 100%;
-	background-image: url(/_user.svg);
+	background-image: url(resources/user.svg);
 	background-size: 50%;
 	background-position: center center;
 	background-repeat: no-repeat;

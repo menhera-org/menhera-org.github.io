@@ -1,0 +1,56 @@
+/* -*- tab-width: 4; indent-tabs-mode: t -*- */
+/**
+	MenheraComponents
+
+	Copyright (C) 2020  Menhera.org
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU Affero General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU Affero General Public License for more details.
+
+	You should have received a copy of the GNU Affero General Public License
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+:host {
+	display: grid;
+	grid-template-columns: [main-start] max-content [content-start] 1fr [main-end];
+	grid-template-rows: [main-start] max-content [content-start] 1fr [main-end];
+}
+
+:host(.collapsed) {
+	grid-template-columns: [main-start] 0 [content-start] 1fr [main-end];
+}
+
+#drawer {
+	grid-column-start: main-start;
+	grid-column-end: content-start;
+	grid-row-start: main-start;
+	grid-row-end: main-end;
+	min-inline-size: 0;
+	background-color: #b52700;
+	color: #fff;
+}
+
+#menubar {
+	grid-column-start: content-start;
+	grid-column-end: main-end;
+	grid-row-start: main-start;
+	grid-row-end: content-start;
+	background-color: #b70070;
+	color: #fff;
+}
+
+#frame {
+	grid-column-start: content-start;
+	grid-column-end: main-end;
+	grid-row-start: content-start;
+	grid-row-end: main-end;
+}
+

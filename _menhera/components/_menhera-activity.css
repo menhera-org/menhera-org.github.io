@@ -18,12 +18,14 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-button, input, select {
-	font: inherit;
+:host(activity-blank:empty:not([hidden])) {
+	display: grid;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
+#loading-logo {
+	max-width: 50%;
+	max-height: 50%;
+	align-self: center;
+	justify-self: center;
 }
 

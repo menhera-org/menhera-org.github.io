@@ -29,8 +29,20 @@ export class MenheraFrameElement extends HTMLElement
 	{
 		super ();
 		const shadowRoot = this.attachShadow ({mode: 'open'});
-		const content = document.querySelector ('#menhera-frame').content;
-		shadowRoot.appendChild (content.cloneNode (true));
+		
+		const cssCommon = document.createElement ('link');
+		cssCommon.rel = 'stylesheet';
+		cssCommon.href = '/_components/common.css';
+		shadowRoot.appendChild (cssCommon);
+		
+		const css = document.createElement ('link');
+		css.rel = 'stylesheet';
+		css.href = '/_components/menhera-frame/menhera-frame.css';
+		shadowRoot.appendChild (css);
+		
+		const slotVisible = document.createElement ('slot');
+		slotVisible.name = 'visible-activity';
+		shadowRoot.appendChild (slotVisible);
 	}
 	
 	connectedCallback ()

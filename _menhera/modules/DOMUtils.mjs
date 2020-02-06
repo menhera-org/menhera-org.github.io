@@ -18,41 +18,22 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-export class MenheraMenubarElement extends HTMLElement
-{
-	static get observedAttributes ()
-	{
-		return [];
+export const appendNewElement = (aParent, aTagName, aProperties) => {
+	const parent = aParent || document.body;
+	const ownerDocument = parent.ownerDocument || document;
+	const defaultView = ownerDocument.defaultView || globalThis;
+	if (!(parent instanceof defaultView.Element)) {
+		throw new TypeError ('Parent is not an Element');
 	}
 	
-	constructor ()
-	{
-		super ();
-		const shadowRoot = this.attachShadow ({mode: 'open'});
-		const content = document.querySelector ('#menhera-menubar').content;
-		shadowRoot.appendChild (content.cloneNode (true));
+	const tagName = String (aTagName || 'div');
+	const element = ownerDocument.createElement (tagName);
+	const properties = aProperties || {};
+	for (let key of Reflect.ownKeys (properties)) {
+		element[key] = properties[key];
 	}
 	
-	connectedCallback ()
-	{
-		
-	}
-	
-	disconnectedCallback ()
-	{
-		
-	}
-	
-	adoptedCallback ()
-	{
-		
-	}
-	
-	attributeChangedCallback ()
-	{
-		
-	}
-}
-
-customElements.define ('menhera-menubar', MenheraMenubarElement);
+	parent.appendChild (element);
+	return element;
+};
 

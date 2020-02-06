@@ -18,10 +18,16 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-#loading-logo {
-	max-width: 50%;
-	max-height: 50%;
-	align-self: center;
-	justify-self: center;
+body {
+	margin: 0;
+}
+
+button, input, select {
+	font: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
 

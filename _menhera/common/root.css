@@ -29,22 +29,12 @@
 body {
 	margin: 0;
 	display: grid;
-	grid-template-columns: [main-start] max-content [content-start] 1fr [main-end];
-	grid-template-rows: [main-start] max-content [content-start] 1fr [main-end];
-	transition: all .25s ease-out;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
 }
 
-menhera-frame {
-	
-}
-
-menhera-frame > menhera-activity {
+menhera-frame > :not([hidden]) {
 	flex-grow: 1;
-	display: grid;
-}
-
-menhera-frame > menhera-activity[hidden] {
-	display: none;
 }
 
 body.collapsed {

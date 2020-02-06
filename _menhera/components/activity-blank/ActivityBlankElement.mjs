@@ -18,7 +18,7 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-export class MenheraActivityElement extends HTMLElement
+export class ActivityBlankElement extends HTMLElement
 {
 	static get observedAttributes ()
 	{
@@ -29,7 +29,7 @@ export class MenheraActivityElement extends HTMLElement
 	{
 		super ();
 		const shadowRoot = this.attachShadow ({mode: 'open'});
-		const content = document.querySelector ('#menhera-activity').content;
+		const content = document.querySelector ('#activity-blank').content;
 		shadowRoot.appendChild (content.cloneNode (true));
 	}
 	
@@ -54,5 +54,5 @@ export class MenheraActivityElement extends HTMLElement
 	}
 }
 
-customElements.define ('menhera-activity', MenheraActivityElement);
+customElements.define ('activity-blank', ActivityBlankElement);
 
