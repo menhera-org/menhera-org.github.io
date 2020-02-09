@@ -104,16 +104,20 @@ export class MenheraWindowElement extends HTMLElement
 		});
 	}
 	
+	toggleDrawer ()
+	{
+		if (this.classList.contains ('drawer-toggled')) {
+			this.classList.remove ('drawer-toggled');
+		} else {
+			this.classList.add ('drawer-toggled');
+		}
+	}
+	
 	connectedCallback ()
 	{
 		const shadow = shadowObjects.get (this);
-		shadow.toggleDrawer.addEventListener ('click', ev => {
-			if (this.classList.contains ('drawer-toggled')) {
-				this.classList.remove ('drawer-toggled');
-			} else {
-				this.classList.add ('drawer-toggled');
-			}
-		});
+		shadow.toggleDrawer.addEventListener ('click'
+			, ev => this.toggleDrawer ());
 	}
 	
 	disconnectedCallback ()
