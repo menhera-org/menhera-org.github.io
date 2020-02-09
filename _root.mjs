@@ -23,3 +23,8 @@ import {MenheraWindowElement} from '/_menhera/components/menhera-window/MenheraW
 const menheraWindow = new MenheraWindowElement;
 document.body.append (menheraWindow);
 
+menheraWindow.addMenuGroup ('account');
+menheraWindow.setMenuGroupLabel ('account', 'Guest');
+menheraWindow.addMenuItem ('account', 'sign-in', 'Sign in', '/login');
+
+

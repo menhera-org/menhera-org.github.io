@@ -260,7 +260,7 @@ export class MenheraWindowElement extends HTMLElement
 			}
 		);
 		
-		groupItem.textContent = aItemLabel;
+		groupItem.anchorElement.textContent = aItemLabel;
 		
 		group.itemsMap[aItemName] = groupItem;
 		return true;
