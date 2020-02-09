@@ -283,6 +283,32 @@ export class MenheraWindowElement extends HTMLElement
 		groupItem.wrapperElement.remove ();
 		delete group.itemsMap[aItemName];
 	}
+	
+	get siteName ()
+	{
+		const shadow = shadowObjects.get (this);
+		return shadow.drawerHeading.textContent;
+	}
+	
+	set siteName (aSiteName)
+	{
+		const shadow = shadowObjects.get (this);
+		shadow.drawerHeading.textContent = aSiteName;
+		return true;
+	}
+	
+	get siteSlogan ()
+	{
+		const shadow = shadowObjects.get (this);
+		return shadow.drawerSubheading.textContent;
+	}
+	
+	set siteSlogan (aSiteSlogan)
+	{
+		const shadow = shadowObjects.get (this);
+		shadow.drawerSubheading.textContent = aSiteSlogan;
+		return true;
+	}
 }
 
 customElements.define ('menhera-window', MenheraWindowElement);

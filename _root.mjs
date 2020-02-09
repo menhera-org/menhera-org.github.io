@@ -27,4 +27,6 @@ menheraWindow.addMenuGroup ('account');
 menheraWindow.setMenuGroupLabel ('account', 'Guest');
 menheraWindow.addMenuItem ('account', 'sign-in', 'Sign in', '/login');
 
+menheraWindow.siteName = 'Menhera.org GitHub Page';
+menheraWindow.siteSlogan = 'MenheraComponents Tests';
 
