@@ -33,7 +33,7 @@ export class MenheraWindowElement extends HTMLElement
 	constructor ()
 	{
 		super ();
-		const shadow = shadowObject.get (this);
+		const shadow = shadowObjects.get (this);
 		shadow.root = this.attachShadow ({mode: 'closed'});
 		
 		appendNewElement (shadow.root, 'link', {
@@ -52,22 +52,68 @@ export class MenheraWindowElement extends HTMLElement
 		
 		shadow.menubar = appendNewElement (shadow.root, 'div', {
 			id: 'menubar',
+			hidden: true,
 		});
 		
 		shadow.drawer = appendNewElement (shadow.root, 'div', {
 			id: 'drawer',
+			hidden: true,
+		});
+		
+		shadow.hiddenActivities = appendNewElement (shadow.root, 'div', {
+			id: 'hidden-activities',
+			hidden: true,
 		});
 		
 		shadow.slotVisible = appendNewElement (shadow.frame, 'slot', {
 			name: 'visible-activity',
 		});
 		
+		shadow.slotInvisible = appendNewElement (shadow.hiddenActivities, 'slot');
 		
+		shadow.frameSplash = appendNewElement (shadow.slotVisible, 'div', {
+			id: 'frame-splash',
+			hidden: true,
+		});
+		
+		shadow.frameSplash.innerHTML = `<svg id='loading-logo' viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'><circle cx='128' cy='128' fill='none' r='96' stroke='#5eaf00' stroke-width='16'/><path d='M84,96 l8,8 l-16,64 m16,-64 h96 l-16,64 m-32,-64 l-16,64' fill='none' stroke='#5eaf00' stroke-linecap='round' stroke-linejoin='round' stroke-width='16'/></svg>`;
+		
+		shadow.toggleDrawer = appendNewElement (shadow.menubar, 'button', {
+			id: 'toggle-drawer',
+		});
+		
+		shadow.menuHeading = appendNewElement (shadow.menubar, 'h1', {
+			id: 'menu-heading',
+		});
+		
+		shadow.menuHeading.textContent = 'Loading...';
+		
+		shadow.menuAccount = appendNewElement (shadow.menubar, 'a', {
+			id: 'menu-account',
+			href: '/login',
+		});
+		
+		shadow.menuAccount.textContent = 'Account / Sign in';
+		
+		shadow.drawerHeading = appendNewElement (shadow.drawer, 'h2', {
+			id: 'drawer-heading',
+		});
+		
+		shadow.drawerSubheading = appendNewElement (shadow.drawer, 'h3', {
+			id: 'drawer-subheading',
+		});
 	}
 	
 	connectedCallback ()
 	{
-		
+		const shadow = shadowObjects.get (this);
+		shadow.toggleDrawer.addEventListener ('click', ev => {
+			if (this.classList.contains ('drawer-toggled')) {
+				this.classList.remove ('drawer-toggled');
+			} else {
+				this.classList.add ('drawer-toggled');
+			}
+		});
 	}
 	
 	disconnectedCallback ()
@@ -81,6 +127,26 @@ export class MenheraWindowElement extends HTMLElement
 	}
 	
 	attributeChangedCallback ()
+	{
+		
+	}
+	
+	addMenuGroup (aGroupName, aGroupLabel)
+	{
+		
+	}
+	
+	removeMenuGroup (aGroupName)
+	{
+		
+	}
+	
+	addMenuItem (aGroupName, aItemName, aItemLabel, aTarget)
+	{
+		
+	}
+	
+	removeMenuItem (aGroupName, aItemName)
 	{
 		
 	}

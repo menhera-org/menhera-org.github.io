@@ -22,8 +22,8 @@ export const appendNewElement = (aParent, aTagName, aProperties) => {
 	const parent = aParent || document.body;
 	const ownerDocument = parent.ownerDocument || document;
 	const defaultView = ownerDocument.defaultView || globalThis;
-	if (!(parent instanceof defaultView.Element)) {
-		throw new TypeError ('Parent is not an Element');
+	if (!(parent instanceof defaultView.Element || parent instanceof defaultView.DocumentFragment)) {
+		throw new TypeError ('Parent is not an Element nor a DocumentFragment');
 	}
 	
 	const tagName = String (aTagName || 'div');

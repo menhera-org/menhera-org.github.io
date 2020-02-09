@@ -18,6 +18,20 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+
+/* Default CSS theme variables. */
+:root, :host {
+	--menhera-theme-font-family: system-ui, sans-serif;
+	--menhera-theme-default-font-weight: 300;
+	--menhera-theme-bold-font-weight: 500;
+	--menhera-theme-frame-background-color: #fff;
+	--menhera-theme-frame-text-color: #666;
+	--menhera-theme-menubar-background-color: #d24800;
+	--menhera-theme-menubar-text-color: #fff;
+	--menhera-theme-drawer-background-color: #750055;
+	--menhera-theme-drawer-text-color: #fff;
+}
+
 body {
 	margin: 0;
 }
@@ -29,5 +43,9 @@ button, input, select {
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+strong, h1, h2, h3, h4, h5, h6 {
+	font-weight: var(--menhera-theme-bold-font-weight);
 }
 

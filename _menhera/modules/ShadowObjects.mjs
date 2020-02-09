@@ -21,7 +21,7 @@
 
 export class ShadowObjects extends WeakMap
 {
-	construct ()
+	constructor ()
 	{
 		super ();
 		Reflect.preventExtensions (this);

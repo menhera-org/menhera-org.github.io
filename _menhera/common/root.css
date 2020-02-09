@@ -23,7 +23,8 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 	min-block-size: 100%;
-	font-family: system-ui, sans-serif;
+	font-family: var(--menhera-theme-font-family);
+	font-weight: var(--menhera-theme-default-font-weight);
 }
 
 body {

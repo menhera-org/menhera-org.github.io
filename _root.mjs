@@ -18,6 +18,8 @@
 	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import {ActivityBlankElement} from '/_class-ActivityBlankElement.mjs';
 import {MenheraWindowElement} from '/_menhera/components/menhera-window/MenheraWindowElement.mjs';
+
+const menheraWindow = new MenheraWindowElement;
+document.body.append (menheraWindow);
 
